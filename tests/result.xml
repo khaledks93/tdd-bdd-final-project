@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite name="nosetests" tests="11" errors="0" failures="1" skip="0"><testcase classname="tests.test_cli_commands.TestFlaskCLI" name="test_db_create" time="0.004"></testcase><testcase classname="tests.test_models.TestProductModel" name="test_add_a_product" time="0.063"></testcase><testcase classname="tests.test_models.TestProductModel" name="test_create_a_product" time="0.003"></testcase><testcase classname="tests.test_models.TestProductModel" name="test_delete_a_product" time="0.012"></testcase><testcase classname="tests.test_models.TestProductModel" name="test_find_by_availability" time="0.044"></testcase><testcase classname="tests.test_models.TestProductModel" name="test_find_by_category" time="0.049"></testcase><testcase classname="tests.test_models.TestProductModel" name="test_find_by_name" time="0.029"></testcase><testcase classname="tests.test_models.TestProductModel" name="test_list_all_products" time="0.039"></testcase><testcase classname="tests.test_models.TestProductModel" name="test_read_a_product" time="0.009"></testcase><testcase classname="tests.test_models.TestProductModel" name="test_update_a_product" time="0.015"></testcase><testcase classname="nose.failure.Failure" name="runTest" time="0.000"><failure type="builtins.AssertionError" message="View function mapping is overwriting an existing endpoint function: list_products"><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.9/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.9/unittest/case.py", line 592, in run
+    self._callTestMethod(testMethod)
+  File "/usr/lib/python3.9/unittest/case.py", line 550, in _callTestMethod
+    method()
+  File "/home/theia/venv/lib/python3.9/site-packages/nose/failure.py", line 39, in runTest
+    raise self.exc_val.with_traceback(self.tb)
+  File "/home/theia/venv/lib/python3.9/site-packages/nose/loader.py", line 417, in loadTestsFromName
+    module = self.importer.importFromPath(
+  File "/home/theia/venv/lib/python3.9/site-packages/nose/importer.py", line 47, in importFromPath
+    return self.importFromDir(dir_path, fqname)
+  File "/home/theia/venv/lib/python3.9/site-packages/nose/importer.py", line 94, in importFromDir
+    mod = load_module(part_fqname, fh, filename, desc)
+  File "/usr/lib/python3.9/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.9/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/home/project/tdd-bdd-final-project/tests/test_routes.py", line 52, in <module>
+    class TestProductRoutes(TestCase):
+  File "/home/project/tdd-bdd-final-project/tests/test_routes.py", line 317, in TestProductRoutes
+    def list_products():
+  File "/home/theia/venv/lib/python3.9/site-packages/flask/scaffold.py", line 449, in decorator
+    self.add_url_rule(rule, endpoint, f, **options)
+  File "/home/theia/venv/lib/python3.9/site-packages/flask/scaffold.py", line 50, in wrapper_func
+    return f(self, *args, **kwargs)
+  File "/home/theia/venv/lib/python3.9/site-packages/flask/app.py", line 1361, in add_url_rule
+    raise AssertionError(
+AssertionError: View function mapping is overwriting an existing endpoint function: list_products
+]]></failure></testcase></testsuite>
